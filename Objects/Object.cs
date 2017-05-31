@@ -14,6 +14,15 @@ namespace Object.Objects
       _player1 = userInput1;
       _player2 = userInput2;
     }
+
+    public string GetPlayer1()
+    {
+      return _player1;
+    }
+    public string GetPlayer2()
+    {
+      return _player2;
+    }
     public string Compare()
     {
       _player1 = _player1.ToLower();

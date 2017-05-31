@@ -1,0 +1,24 @@
+@{
+  Layout = "Shared/_Layout.cshtml";
+}
+
+<div class = "container">
+  @if(@Model.Compare() == "error")
+  {
+    <p>There was a problem; please contact our support</p>
+  }else if(@Model.Compare() == "DRAW")
+  {
+    <p>Its a DRAW!!!</p>
+  }else{
+    <p>@Model.Compare().ToUpper() Wins!!!!!</p>
+    <br>;
+  }
+
+  Player 1 picked: @Model.GetPlayer1()
+  <br>
+
+  Player 2 picked: @Model.GetPlayer2()
+  <br>
+
+  <a href="/">Click here to go Back!!!!</a>
+</div>
